@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Opening Mass Text Page", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new MasstextFragment()).commit();
             }
         });
 
