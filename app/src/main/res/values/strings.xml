@@ -6,4 +6,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string-array name="recipients_entries">
+        <item></item>
+        <item>Family</item>
+        <item>Jack, John, and Jill</item>
+        <item>Kris and Allen</item>
+    </string-array>
 </resources>
