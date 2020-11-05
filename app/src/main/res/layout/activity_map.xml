@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maps"
+    tools:context=".MapActivity">
+
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:text="Blue lights"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="80dp"
+        android:onClick="showAlertDialog"
+        android:text="SOS" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="600dp"
+        android:text="Pause"
+        android:onClick="showAlertDialog1"/>
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="600dp"
+        android:text="Stop"
+        android:onClick="showAlertDialog2"/>
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="114dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="580dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:layout_marginStart="30dp"
+        android:text=" 5 min\n 0.3 mile\n 14:32" />
+
+</RelativeLayout>
