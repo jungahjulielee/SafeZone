@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/maps"
     tools:context=".MapActivity">
 
 
@@ -12,8 +11,10 @@
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="95dp"
         android:text="Blue lights"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,37 +23,71 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="88dp"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
         android:onClick="showAlertDialog"
         android:text="SOS" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="600dp"
-        android:text="Pause"
-        android:onClick="showAlertDialog1"/>
+        android:layout_width="119dp"
+        android:layout_height="68dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginBottom="36dp"
+        android:onClick="showAlertDialog1"
+        android:text="Pause" />
+
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="114dp"
+        android:layout_height="69dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="270dp"
-        android:layout_marginTop="600dp"
-        android:text="Stop"
-        android:onClick="showAlertDialog2"/>
+        android:layout_marginLeft="270dp"
+        android:layout_marginBottom="36dp"
+        android:onClick="showAlertDialog2"
+        android:text="Stop" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="114dp"
         android:layout_height="101dp"
-        android:layout_marginTop="580dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:layout_marginStart="30dp"
         android:text=" 5 min\n 0.3 mile\n 14:32" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="511dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="25dp" />
 
 </RelativeLayout>
