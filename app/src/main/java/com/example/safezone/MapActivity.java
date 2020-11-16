@@ -8,12 +8,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class MapActivity extends AppCompatActivity {
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
+    GoogleMap map;
+    SupportMapFragment mapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+
+        mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
     public void showAlertDialog(View v) {
@@ -69,5 +83,15 @@ public class MapActivity extends AppCompatActivity {
             }
         });
         alert.create().show();
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        map = googleMap;
+
+        LatLng Coffman = new LatLng(44.972983176, -93.2353068283);
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(Coffman, 17));
+        map.addMarker(new MarkerOptions().position(Coffman).title("Coffman"));
+
     }
 }
