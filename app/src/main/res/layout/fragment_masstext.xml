@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/white">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
+        android:layout_marginStart="140dp"
         android:layout_marginLeft="39dp"
         android:layout_marginTop="25dp"
         android:text="Mass Text"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="657dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="91dp">
+        android:layout_marginTop="150dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,8 +31,10 @@
                 android:id="@+id/titleMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="46dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
                 android:text="Message:"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:visibility="visible" />
 
@@ -59,16 +61,21 @@
                     android:id="@+id/titleRecipients"
                     android:layout_width="wrap_content"
                     android:layout_height="46dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
                     android:text="Recipients:"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:visibility="visible" />
 
                 <Spinner
                     android:id="@+id/spinnerRecipients"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#FFFFFF" />
+                    android:layout_width="263dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white" />
 
             </LinearLayout>
 
@@ -81,8 +88,11 @@
                     android:id="@+id/titleSendLocation"
                     android:layout_width="wrap_content"
                     android:layout_height="46dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
                     android:text="Include current location:"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:visibility="visible" />
 
@@ -90,6 +100,7 @@
                     android:id="@+id/checkBox3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:text="CheckBox" />
             </LinearLayout>
@@ -98,6 +109,7 @@
                 android:id="@+id/buttonSend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:layout_gravity="center"
                 android:text="Send"
                 android:textStyle="bold"
