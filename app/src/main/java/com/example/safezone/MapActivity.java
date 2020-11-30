@@ -53,16 +53,16 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("The navigation is pausing");
         alert.setMessage("Timer for mass texts is pausing.");
-        alert.setPositiveButton("Resume", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int which) {
-                Toast.makeText(MapActivity.this,"Continue navigation.", Toast.LENGTH_SHORT).show();
-            }
-        });
-        alert.setNegativeButton("Stop", new DialogInterface.OnClickListener() {
+        alert.setPositiveButton("Stop", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 Toast.makeText(MapActivity.this,"Navigation is stopped.", Toast.LENGTH_SHORT).show();
+            }
+        });
+        alert.setNegativeButton("Resume", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int which) {
+                Toast.makeText(MapActivity.this,"Continue navigation.", Toast.LENGTH_SHORT).show();
             }
         });
         alert.create().show();
