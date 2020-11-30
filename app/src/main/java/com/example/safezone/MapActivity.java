@@ -58,6 +58,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 Toast.makeText(MapActivity.this,"Navigation is stopped.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), MapFragment.class);
+                startActivity(intent);
             }
         });
         alert.setNegativeButton("Resume", new DialogInterface.OnClickListener() {
@@ -71,7 +73,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void showAlertDialog2(View v) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Do you want to quit the navigation?");
-        alert.setPositiveButton("Quit", new DialogInterface.OnClickListener() {
+        alert.setPositiveButton("Stop", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 Toast.makeText(MapActivity.this,"Navigation is stopped.", Toast.LENGTH_SHORT).show();
