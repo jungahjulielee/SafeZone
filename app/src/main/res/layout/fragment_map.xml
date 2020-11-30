@@ -19,13 +19,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="185dp"
+        android:layout_marginRight="185dp"
+        android:text="Map"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp" />
+
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="match_parent"
+        android:layout_width="259dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="330dp"
-        android:layout_marginEnd="80dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="133dp"
+        android:layout_marginBottom="363dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -56,32 +74,39 @@
         android:textSize="18sp"
         android:visibility="visible" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
+        android:id="@+id/et_destination"
         android:layout_width="224dp"
         android:layout_height="84dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="123dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
         android:background="#FFFFFF"
         android:hint="Set destination" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:layout_width="224dp"
         android:layout_height="84dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="219dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
         android:background="#FFFFFF"
         android:hint="Set arrival time" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="135dp"
-        android:layout_height="115dp"
+        android:layout_width="wrap_content"
+        android:layout_height="66dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="330dp"
         android:background="#FFFFFF"
+        android:text="Recipients"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        android:text="Recipients" />
+        android:textSize="18sp" />
 </RelativeLayout>

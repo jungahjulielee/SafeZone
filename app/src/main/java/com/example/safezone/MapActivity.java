@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -63,6 +64,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 Toast.makeText(MapActivity.this,"Navigation is stopped.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), MapFragment.class);
+                startActivity(intent);
             }
         });
         alert.create().show();
@@ -74,6 +77,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 Toast.makeText(MapActivity.this,"Navigation is stopped.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), MapFragment.class);
+                startActivity(intent);
             }
         });
         alert.setNegativeButton("Resume", new DialogInterface.OnClickListener() {
@@ -87,6 +92,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         map = googleMap;
 
         LatLng Coffman = new LatLng(44.972983176, -93.2353068283);
