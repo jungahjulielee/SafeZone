@@ -35,6 +35,14 @@ public class MasstextFragment extends Fragment {
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
+        //https://www.youtube.com/watch?v=on_OrrX7Nw4
+        //https://stackoverflow.com/questions/31966406/fragment-cannot-be-converted-to-context
+        Spinner spinner2 = view.findViewById(R.id.spinner3);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(view.getContext(),
+                R.array.ExampleMessages, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(adapter2);
+
         // Set button callback
         Button send_button = (Button) view.findViewById(R.id.buttonSend);
         send_button.setOnClickListener(new View.OnClickListener() {

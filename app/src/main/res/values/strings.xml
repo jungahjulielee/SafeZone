@@ -12,4 +12,16 @@
         <item>Jack, John, and Jill</item>
         <item>Kris and Allen</item>
     </string-array>
+
+    <string-array name="Messages">
+        <item></item>
+        <item>Call 911. Something has happened to me. I\'m 5\'9" , 170 lbs. brown eyes and hair.</item>
+    </string-array>
+
+    <string-array name="ExampleMessages">
+        <item></item>
+        <item>Sorry, That last text was sent by accident. Please DON\'T call 911.</item>
+        <item>I\'m 5 minutes from my destination.</item>
+        <item>I\'m safe.</item>
+    </string-array>
 </resources>

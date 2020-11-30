@@ -48,7 +48,7 @@
                 android:id="@+id/button5"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_gravity="center"
                 android:text="Create new"
                 android:textColor="@color/white" />
 
@@ -117,6 +117,14 @@
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#4CAF50"
+                android:text="save" />
+
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="37dp" />
@@ -129,6 +137,68 @@
                 android:text="Mass Text Settings"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="Add a message:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="message here"
+                    android:inputType="textMultiLine"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="Delete message:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/spinner4"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#eed202"
+                android:text="Save Changes" />
 
         </LinearLayout>
     </ScrollView>

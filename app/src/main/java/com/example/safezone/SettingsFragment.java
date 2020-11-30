@@ -37,6 +37,12 @@ public class SettingsFragment extends Fragment {
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
+        Spinner spinner2 = view.findViewById(R.id.spinner4);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(view.getContext(),
+                R.array.ExampleMessages, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(adapter2);
+
         RecyclerView recipients_recycler = view.findViewById(R.id.recyclerRecipients);
         recipients_recycler.setLayoutManager(new LinearLayoutManager(view.getContext()));
         RecipientsAdapter recipients_adapter = new RecipientsAdapter(getResources().getStringArray(R.array.recipients_entries));
