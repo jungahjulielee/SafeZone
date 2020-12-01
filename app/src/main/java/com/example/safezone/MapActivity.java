@@ -39,7 +39,11 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             alert.setPositiveButton("Send", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int which) {
-                    Toast.makeText(MapActivity.this,"SOS messages are sending out!", Toast.LENGTH_SHORT).show();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);
+                    builder.setMessage("SOS messages are sending out!")
+                            .setTitle("ALERT");
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
                 }
             });
             alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
