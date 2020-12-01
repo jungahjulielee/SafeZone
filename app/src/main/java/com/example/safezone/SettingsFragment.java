@@ -66,7 +66,14 @@ public class SettingsFragment extends Fragment {
             public void onClick(View v) {
                 EditText newGroupEditText = (EditText) getView().findViewById(R.id.editTextNameNewGroup);
                 String newGroup = newGroupEditText.getText().toString();
-                recipientGroups.add(newGroup);
+                if(newGroup.equals("") == true){
+                    newGroupEditText.setText("");
+                }
+                else {
+                    recipientGroups.add(newGroup);
+                    newGroupEditText.setText("");
+                    Toast.makeText(view.getContext(), "Group Added", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -91,7 +98,15 @@ public class SettingsFragment extends Fragment {
             public void onClick(View v) {
                 EditText newMessageEditText = (EditText) getView().findViewById(R.id.editTextNewMessage);
                 String newMessage = newMessageEditText.getText().toString();
-                messageTemplates.add(newMessage);
+                if(newMessage.equals("")== true){
+                    newMessageEditText.setText("");
+                }
+                else {
+                    messageTemplates.add(newMessage);
+                    newMessageEditText.setText("");
+                    Toast.makeText(view.getContext(), "Message Added", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

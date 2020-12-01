@@ -20,6 +20,7 @@
         android:textColor="@color/black"
         android:textStyle="bold" />
 
+
     <TextView
         android:id="@+id/viewGroups"
         android:layout_width="200dp"
@@ -27,7 +28,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="74dp"
         android:layout_weight="1"
         android:text="View Group(s):"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -40,10 +41,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="146dp"
+        android:layout_marginTop="161dp"
         android:text="Add New Group"
         android:textColor="@color/white" />
-
 
     <Button
         android:id="@+id/buttonAddMessage"
@@ -54,9 +54,9 @@
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="363dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginRight="51dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
         android:text="Add New Message"
         android:textColor="@color/white" />
 
@@ -114,7 +114,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="103dp"
+        android:layout_marginTop="118dp"
         android:layout_weight="1"
         android:text="Name New Group:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -143,9 +143,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="173dp"
-        android:layout_marginTop="103dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="53dp"
         android:layout_weight="1"
         android:background="#FFFFFF"
         android:ems="10"
@@ -175,9 +175,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="527dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="522dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="1" />
 
     <Spinner
@@ -188,9 +188,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="58dp"
-        android:layout_marginEnd="22dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="26dp"
         android:layout_weight="1" />
 
     <TextView
@@ -201,8 +201,8 @@
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="223dp"
-        android:layout_marginEnd="-7dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="-1dp"
         android:text="Mass Text Settings"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/black"
@@ -216,26 +216,28 @@
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="319dp"
+        android:layout_marginTop="327dp"
         android:layout_weight="1"
-        android:text="Add a message:"
+        android:text="Add New Message:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/editTextNewMessage"
-        android:layout_width="197dp"
+        android:layout_width="169dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="319dp"
+        android:layout_marginStart="182dp"
+        android:layout_marginTop="327dp"
+        android:layout_marginEnd="23dp"
         android:layout_weight="1"
         android:background="#FFFFFF"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="message here"
+        android:hint="Message Here"
         android:inputType="textMultiLine"
         android:textColor="#000000" />
 
@@ -248,7 +250,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="274dp"
+        android:layout_marginTop="283dp"
         android:layout_weight="1"
         android:text="View Message(s):"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -262,10 +264,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="166dp"
-        android:layout_marginLeft="166dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginLeft="167dp"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="23dp"
         android:layout_weight="1" />
 
     <TextView
@@ -279,7 +281,7 @@
         android:layout_marginStart="17dp"
         android:layout_marginLeft="17dp"
         android:layout_marginBottom="110dp"
-        android:text="Include current location:"
+        android:text="Include Current Location:"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:visibility="visible" />
