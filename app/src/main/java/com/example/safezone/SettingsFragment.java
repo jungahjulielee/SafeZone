@@ -41,7 +41,7 @@ public class SettingsFragment extends Fragment {
                 return true;
             }
         });
-        
+
         //ARRAY LIST CONTACT GROUPS
         ArrayList<String> recipientGroups = new ArrayList<>();
         recipientGroups.add("Roommates");
