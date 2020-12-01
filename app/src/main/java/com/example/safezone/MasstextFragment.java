@@ -57,7 +57,11 @@ public class MasstextFragment extends Fragment {
         send_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(view.getContext(), "SMS Sent", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setMessage("SMS Text")
+                        .setTitle("ALERT");
+                AlertDialog dialog = builder.create();
+                dialog.show();
                 EditText message = (EditText) view.findViewById(R.id.editTextMessage);
                 message.setText("");
             }
