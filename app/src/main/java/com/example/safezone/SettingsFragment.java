@@ -1,5 +1,6 @@
 package com.example.safezone;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,8 +17,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import java.util.ArrayList;
+
 
 public class SettingsFragment extends Fragment {
+    Button buttonAddGroup;
+    Button buttonAddMessage;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -26,26 +32,80 @@ public class SettingsFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        // Initialize spinner entries
+        //ARRAY LIST CONTACT GROUPS
+        ArrayList<String> recipientGroups = new ArrayList<>();
+        recipientGroups.add("Roommates");
+        recipientGroups.add("Family");
 
+        //ARRAY LIST MASS TEXT
+        ArrayList<String> messageTemplates = new ArrayList<>();
+        messageTemplates.add("Sorry, That last text was sent by accident.");
+        messageTemplates.add("I'm 5 minutes from my destination.");
+        messageTemplates.add("I'm safe.");
+
+        //MANAGE RECIPIENTS
+
+        //View Group(s) spinner
+        Spinner spinnerGroup = (Spinner) view.findViewById(R.id.spinnerViewGroups);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<String> adapterGroup =
+                new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, recipientGroups);
+        // Specify the layout to use when the list of choices appears
+        adapterGroup.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinnerGroup.setAdapter(adapterGroup);
+
+        //get content from edit text and add to groups
+        //EditText newGroupEditText = (EditText) getView().findViewById(R.id.editTextNameNewGroup);
+        //String newGroup = newGroupEditText.getText().toString();
+
+        //add to spinner on button click
+        buttonAddGroup = getView().findViewById(R.id.buttonAddGroup);
+        buttonAddGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText newGroupEditText = (EditText) getView().findViewById(R.id.editTextNameNewGroup);
+                String newGroup = newGroupEditText.getText().toString();
+                recipientGroups.add(newGroup);
+            }
+        });
+
+        //MASS TEXT SETTINGS
+        Spinner spinnerMassText = view.findViewById(R.id.spinnerViewMessages);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<String> adapterMessages =
+                new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, messageTemplates);
+        // Specify the layout to use when the list of choices appears
+        adapterMessages.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinnerMassText.setAdapter(adapterMessages);
+
+        //get content from edit text and add to groups
+        //EditText newGroupEditText = (EditText) getView().findViewById(R.id.editTextNameNewGroup);
+        //String newGroup = newGroupEditText.getText().toString();
+
+        //add to spinner on button click
+        buttonAddMessage = getView().findViewById(R.id.buttonAddMessage);
+        buttonAddMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText newMessageEditText = (EditText) getView().findViewById(R.id.editTextNewMessage);
+                String newMessage = newMessageEditText.getText().toString();
+                messageTemplates.add(newMessage);
+            }
+        });
+
+        //initialize spinner entries
         Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(view.getContext(),
-                R.array.recipients_entries, android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, recipientGroups);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
-        Spinner spinner2 = view.findViewById(R.id.spinner4);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(view.getContext(),
-                R.array.ExampleMessages, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner2.setAdapter(adapter2);
 
-        RecyclerView recipients_recycler = view.findViewById(R.id.recyclerRecipients);
-        recipients_recycler.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        RecipientsAdapter recipients_adapter = new RecipientsAdapter(getResources().getStringArray(R.array.recipients_entries));
-        recipients_recycler.setAdapter(recipients_adapter);
     }
+
 }
