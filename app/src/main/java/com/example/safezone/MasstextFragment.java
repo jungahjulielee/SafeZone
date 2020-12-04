@@ -58,7 +58,7 @@ public class MasstextFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setMessage("SMS Text")
+                builder.setMessage("SMS Text Sent")
                         .setTitle("ALERT");
                 AlertDialog dialog = builder.create();
                 dialog.show();
