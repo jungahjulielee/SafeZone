@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -51,7 +52,7 @@ public class MasstextFragment extends Fragment {
                 R.array.ExampleMessages, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(adapter2);
-
+        
         // Set button callback
         Button send_button = (Button) view.findViewById(R.id.buttonSend);
         send_button.setOnClickListener(new View.OnClickListener() {
