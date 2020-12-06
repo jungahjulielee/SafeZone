@@ -24,6 +24,7 @@ import java.util.ArrayList;
 public class SettingsFragment extends Fragment {
     Button buttonAddGroup;
     Button buttonAddMessage;
+    Button buttonSave;
 
     @Nullable
     @Override
@@ -117,6 +118,14 @@ public class SettingsFragment extends Fragment {
                     Toast.makeText(view.getContext(), "Message Added", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        buttonSave = getView().findViewById(R.id.buttonSave);
+        buttonSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Changes Saved.", Toast.LENGTH_SHORT).show();
             }
         });
 
