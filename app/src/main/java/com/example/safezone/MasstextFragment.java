@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -34,6 +36,56 @@ public class MasstextFragment extends Fragment {
                 return true;
             }
         });
+
+
+        EditText customMessageEditText = (EditText) view.findViewById(R.id.editTextMessage);
+        customMessageEditText.setFocusable(false);
+        customMessageEditText.setClickable(false);
+        Spinner preWrittenMessageSpinner = view.findViewById(R.id.spinner3);
+        preWrittenMessageSpinner.setEnabled(false);
+
+
+        CheckBox customMessage = (CheckBox) view.findViewById(R.id.checkBoxCustomMessage);
+        CheckBox preWrittenMessage = (CheckBox) view.findViewById(R.id.checkBoxPreWrittenMessage);
+
+        customMessage.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    customMessageEditText.setFocusableInTouchMode(true);
+                    customMessageEditText.setClickable(true);
+                    preWrittenMessage.setChecked(false);
+                    preWrittenMessageSpinner.setSelection(0);
+                    preWrittenMessageSpinner.setEnabled(false);
+                }
+                else{
+                    //preWrittenMessageSpinner.setEnabled(true);
+                    customMessageEditText.setFocusable(false);
+                    customMessageEditText.setClickable(false);
+                }
+            }
+        });
+
+        preWrittenMessage.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    preWrittenMessageSpinner.setEnabled(true);
+                    customMessage.setChecked(false);
+                    customMessageEditText.setText("");
+                    customMessageEditText.setFocusable(false);
+                    customMessageEditText.setClickable(false);
+                }
+                else{
+                    //customMessageEditText.setFocusableInTouchMode(true);
+                    //customMessageEditText.setClickable(true);
+                    preWrittenMessageSpinner.setEnabled(false);
+
+                }
+            }
+        });
+
+
         // Initialize spinner entries
 
         Spinner spinner = (Spinner) view.findViewById(R.id.spinnerRecipients);
@@ -52,7 +104,8 @@ public class MasstextFragment extends Fragment {
                 R.array.ExampleMessages, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(adapter2);
-        
+
+
         // Set button callback
         Button send_button = (Button) view.findViewById(R.id.buttonSend);
         send_button.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +118,13 @@ public class MasstextFragment extends Fragment {
                 dialog.show();
                 EditText message = (EditText) view.findViewById(R.id.editTextMessage);
                 message.setText("");
+                spinner2.setSelection(0);
+                customMessage.setChecked(false);
+                preWrittenMessage.setChecked(false);
+                customMessageEditText.setFocusable(false);
+                customMessageEditText.setClickable(false);
+                preWrittenMessageSpinner.setEnabled(false);
+
             }
         });
     }

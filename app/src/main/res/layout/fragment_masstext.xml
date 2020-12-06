@@ -13,9 +13,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginRight="148dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginRight="147dp"
         android:text="Mass Text"
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -29,7 +29,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="198dp"
         android:layout_marginEnd="198dp"
         android:layout_marginRight="198dp"
         android:text="or"
@@ -43,12 +43,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="105dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginTop="117dp"
         android:text="Custom Message:"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="25sp"
         android:visibility="visible" />
 
     <TextView
@@ -58,22 +58,24 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="247dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="249dp"
         android:text="Pre-Written Messages:"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="25sp"
         android:visibility="visible" />
 
     <EditText
         android:id="@+id/editTextMessage"
-        android:layout_width="354dp"
-        android:layout_height="29dp"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="142dp"
-        android:layout_marginEnd="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="46dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:gravity="start|top"
@@ -85,14 +87,14 @@
 
     <Spinner
         android:id="@+id/spinner3"
-        android:layout_width="359dp"
-        android:layout_height="37dp"
+        android:layout_width="307dp"
+        android:layout_height="43dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="280dp"
-        android:layout_marginEnd="22dp"
-        android:spinnerMode="dropdown" />
+        android:layout_marginTop="291dp"
+        android:layout_marginEnd="29dp"
+        android:spinnerMode="dropdown"/>
 
     <TextView
         android:id="@+id/titleRecipients"
@@ -102,7 +104,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="341dp"
+        android:layout_marginTop="357dp"
         android:text="Recipients:"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -116,9 +118,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
         android:layout_marginStart="124dp"
         android:layout_marginLeft="124dp"
-        android:layout_marginTop="333dp"
+        android:layout_marginTop="354dp"
         android:layout_marginEnd="26dp"
         android:spinnerMode="dropdown" />
 
@@ -131,9 +134,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginStart="161dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginTop="463dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginTop="481dp"
         android:text="Send"
         android:textStyle="bold"
         app:backgroundTint="#4CAF50" />
@@ -147,11 +150,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="426dp"
         android:text="Include current location:"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:visibility="visible" />
+
 
     <CheckBox
         android:id="@+id/checkBox3"
@@ -160,11 +164,35 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="235dp"
-        android:layout_marginLeft="235dp"
-        android:layout_marginTop="401dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="415dp"
         android:layout_weight="1"
         android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCustomMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="112dp"
+        android:layout_weight="1" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPreWrittenMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="245dp"
+        android:layout_weight="1" />
 
 
 </RelativeLayout>
